@@ -1,0 +1,80 @@
+/* Assignment 3.3 Styles - Johnathan Smith */
+
+/* Container is required in HTML, margins are not specified here, so keep it simple */
+#container {
+  width: 100%;
+}
+
+/* h1 must be centered */
+h1 {
+  text-align: center;
+}
+
+/* Side-by-side divs must be 45% width */
+.side-by-side {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left {
+  margin-right: 4%;
+}
+
+/* h3 weight must be 500 */
+h3 {
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+/* list weight must be 300 */
+ol, ul {
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Ordered list + title: 1px solid red border, 15px radius */
+.ordered-title,
+.ordered-list {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Numbers need to be inside border */
+.ordered-list {
+  list-style-position: inside;
+}
+
+/* Unordered list + title: 1px dashed red border, 15px radius */
+.unordered-title,
+.unordered-list {
+  border: 1px dashed red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Bullet points to upper-roman + inside border */
+.unordered-list {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+/* Bottom div: width 100%, margin-top 60%, float right, margin-bottom 20px */
+#bottom {
+  width: 100%;
+  margin-top: 60%;
+  float: right;
+  margin-bottom: 20px;
+}
+
+/* Return link floated right */
+#return-link {
+  float: right;
+  text-decoration: none;
+}
+
+/* Hover: show underline */
+#return-link:hover {
+  text-decoration: underline;
+}
