@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bioSite - Hobbies</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="site-title">Johnathan Smith</h1>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="hobbies.html">Hobbies</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Hobbies</h2>
+      <p>
+        Outside of school and work, I like staying active, gaming, and improving my skills.
+        These hobbies keep me disciplined and creative.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Basketball / Working Out</h3>
+        <figure>
+          <img src="images/bio-2.jpg" alt="Fitness or basketball related image" />
+          <figcaption>Training builds consistency and mindset.</figcaption>
+        </figure>
+        <p>I like workouts that challenge me and keep me feeling sharp.</p>
+      </article>
+
+      <article class="card">
+        <h3>Video Games</h3>
+        <figure>
+          <img src="images/bio-3.jpg" alt="Gaming or technology related image" />
+          <figcaption>Games are fun, but also teach strategy and teamwork.</figcaption>
+        </figure>
+        <p>Competitive games especially push decision-making and focus.</p>
+      </article>
+
+      <article class="card">
+        <h3>Learning Tech</h3>
+        <p>
+          I’m always trying to get better at coding and building projects that feel real—like something you’d actually use.
+        </p>
+        <p class="external-link">
+          External link:
+          <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
+            MDN Web Docs
+          </a>
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <p>&copy; <span id="year"></span> Johnathan Smith</p>
+      <p class="small">bioSite • CSD-340</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
