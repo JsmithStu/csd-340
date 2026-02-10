@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bioSite - Hobbies</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="site-title">Johnathan Smith</h1>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="hobbies.html">Hobbies</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Hobbies</h2>
+      <p>
+        I like to stay active, play video games, and develop my skills outside of job and school.
+        These hobbies help me stay disciplined and innovative.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Basketball / Working Out</h3>
+        <figure>
+          <img src="images/bio-2.jpg" alt="Fitness or basketball related image" />
+          <figcaption>Training builds consistency and mindset.</figcaption>
+        </figure>
+        <p>I like workouts that challenge me and keep me on top of my game.</p>
+      </article>
+
+      <article class="card">
+        <h3>Video Games</h3>
+        <figure>
+          <img src="images/bio-3.jpg" alt="Gaming or technology related image" />
+          <figcaption>Games are fun, but also teach strategy and teamwork.</figcaption>
+        </figure>
+        <p>Competitive games especially push decision-making and focus like chess..</p>
+      </article>
+
+      <article class="card">
+        <h3>Learning Tech</h3>
+        <p>
+          I'm constantly working to improve my coding skills and create products that seem genuine like something you'd use. so ive been working on a few projects            to get better at this.
+        </p>
+        <p class="external-link">
+          External link:
+          <a href="https://www.codedex.io/home" target="_blank" rel="noopener noreferrer">
+            Codedex
+          </a>
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <p>&copy; <span id="year"></span> Johnathan Smith</p>
+      <p class="small">bioSite • CSD-340</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
