@@ -3,76 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bioSite - Home</title>
-  <link rel="stylesheet" href="css/site.css" />
+  <title>CSD 340 Landing Page</title>
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-flex">
-      <h1 class="site-title">Johnathan Smith</h1>
+  <div id="container">
+    <h1>Johnathan Smith</h1>
+    <h2>CSD 340 Web Development with HTML and CSS</h2>
+    <hr />
 
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="nav-link active" href="index.html">Home</a>
-        <a class="nav-link" href="hobbies.html">Hobbies</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-        <a class="nav-link" href="module-8/Smith_Mod8_2.html">Assignment 8.2</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="card">
-      <h2>About Me</h2>
-      <p>
-        Welcome to my bioSite. This site is built using an atomic design approach where smaller parts
-        (like buttons and text styles) combine into bigger sections (like the header, image cards, and footer).
-      </p>
-
-      <p>
-        Here’s a quick intro: Student at Bellevue University pursing a degree in Software Development and love for creating apps, websites.
-      </p>
-
-      <p class="external-link">
-        External link:
-        <a href="https://app.joinhandshake.com/" target="_blank" rel="noopener noreferrer">
-          Visit Handshake
-        </a>
-      </p>
-    </section>
-
-    <section class="grid">
-      <article class="card">
-        <figure>
-          <img src="images/bio-1.jpg" alt="A photo representing my education or career goals" />
-          <figcaption>Building real skills and consistency with my school work everyday.</figcaption>
-        </figure>
-      </article>
-
-      <article class="card">
-        <figure>
-          <img src="images/bio-2.jpg" alt="A photo representing my interests like fitness or sports" />
-          <figcaption>Staying active helps me stay locked in mentally.</figcaption>
-        </figure>
-      </article>
-
-      <article class="card">
-        <figure>
-          <img src="images/bio-3.jpg" alt="A photo representing technology or coding" />
-                      <figcaption>Always leveling up and learning everyday.</figcaption>
-                    </figure>
-                  </article>
-                </section>
-              </main>
-
-              <footer class="site-footer">
-                <div class="container footer-flex">
-                  <p>&copy; <span id="year"></span> Johnathan Smith</p>
-                  <p class="small">bioSite • CSD-340</p>
-                </div>
-              </footer>
-
-              <script>
-                document.getElementById("year").textContent = new Date().getFullYear();
-              </script>
-            </body>
-            </html>
+    <h3>Module Assignments</h3>
+    <ul>
+      <li><a href="module-8/Smith_Mod8_2.html">Assignment 8.2</a></li>
+    </ul>
+  </div>
+</body>
+</html>
