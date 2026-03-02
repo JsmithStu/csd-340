@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 30px; line-height: 1.6; }
+    h1 { margin-bottom: 10px; }
+    .blank { font-weight: bold; letter-spacing: 2px; }
+    button { margin: 6px 10px 6px 0; padding: 8px 12px; cursor: pointer; }
+    .buttons { margin-top: 10px; }
+  </style>
+
+  <script>
+    const word1 = "Al’s Toy Barn";
+    const word2 = "coding";
+    const word3 = "basketball";
+    const word4 = "discipline";
+
+    function fillBlank(spanId, value) {
+      document.getElementById(spanId).textContent = value;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+  <p>
+    My name is Johnathan, and I like to learn by doing things that I’m familiar with.
+    What is the name of the toy store in Toy Story 2? I’m a big fan of
+    <span id="blank1" class="blank">__________</span>
+       since it had so many funny scenes and memes.
+  </p>
+
+  <p>
+    Lately I’ve been balancing school, work, and my hobbies. When I’m not in class, I’m usually
+    practicing <span id="blank2" class="blank">__________</span>,
+    lifting, or playing some games to relax. On my days off, I try to get runs in for
+    <span id="blank3" class="blank">__________</span>
+    with friends also.
+  </p>
+
+  <p>
+    The biggest thing I’ve learned is that progress comes from consistency. Even when I’m tired,
+    I try to stay locked in because <span id="blank4" class="blank">__________</span>
+    is what keeps everything moving forward.
+  </p>
+
+  <div class="buttons">
+    <button type="button" onclick="fillBlank('blank1', word1)">Reveal Word 1</button>
+    <button type="button" onclick="fillBlank('blank2', word2)">Reveal Word 2</button>
+    <button type="button" onclick="fillBlank('blank3', word3)">Reveal Word 3</button>
+    <button type="button" onclick="fillBlank('blank4', word4)">Reveal Word 4</button>
+  </div>
+</body>
+</html>
