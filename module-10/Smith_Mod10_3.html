@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    .main-image {
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+      border: 3px solid #333;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .thumbnail {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      margin: 10px;
+      border: 2px solid #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    function changeImage(imageFile, imageText) {
+      document.getElementById("mainImage").src = imageFile;
+      document.getElementById("description").innerHTML = imageText;
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <p>Click one of the images below to change the main display.</p>
+
+    <img id="mainImage" class="main-image" src="images/bio-1.jpg" alt="Main display image">
+
+    <p id="description">This is the first image in my gallery.</p>
+
+    <div>
+      <img class="thumbnail" src="images/bio-1.jpg" alt="Image 1"
+           onclick="changeImage('images/bio-1.jpg', 'This is the first image in my gallery.')">
+
+      <img class="thumbnail" src="images/bio-2.jpg" alt="Image 2"
+           onclick="changeImage('images/bio-2.jpg', 'This is the second image in my gallery.')">
+
+      <img class="thumbnail" src="images/bio-3.jpg" alt="Image 3"
+           onclick="changeImage('images/bio-3.jpg', 'This is the third image in my gallery.')">
+    </div>
+
+    <a href="../index.html">Back to Landing Page</a>
+  </div>
+</body>
+</html>
