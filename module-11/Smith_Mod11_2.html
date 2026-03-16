@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+      color: white;
+    }
+
+    .add-btn {
+      background-color: #28a745;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+    }
+
+    .sort-btn {
+      background-color: #007bff;
+    }
+
+    #displayArea {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-height: 60px;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p>
+      Enter a task below, then click <strong>Add</strong> to save it to the list.
+      Click <strong>Delete Last Entry</strong> to remove the most recent item.
+      Click <strong>Sort</strong> to sort the list alphabetically.
+    </p>
+
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+
+    <div class="buttons">
+      <button class="add-btn" onclick="addTask()">Add</button>
+      <button class="delete-btn" onclick="deleteLastTask()">Delete Last Entry</button>
+      <button class="sort-btn" onclick="sortTasks()">Sort</button>
+    </div>
+
+    <div id="displayArea">
+      <strong>To Do List:</strong>
+      <ol id="taskList"></ol>
+    </div>
+  </div>
+
+  <script>
+    let toDoList = [];
+
+    function displayTasks() {
+      const taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      for (let i = 0; i < toDoList.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = toDoList[i];
+        taskList.appendChild(li);
+      }
+    }
+
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const task = input.value.trim();
+
+      if (task === "") {
+        alert("Please enter a task before clicking Add.");
+        return;
+      }
+
+      toDoList.push(task);
+      alert("Item added: " + task);
+      input.value = "";
+      displayTasks();
+    }
+
+    function deleteLastTask() {
+      if (toDoList.length === 0) {
+        alert("There are no items to delete.");
+        return;
+      }
+
+      let deletedItem = toDoList.pop();
+      alert("Item deleted: " + deletedItem);
+      displayTasks();
+    }
+
+    function sortTasks() {
+      if (toDoList.length === 0) {
+        alert("There are no items to sort.");
+        return;
+      }
+
+      toDoList.sort();
+      alert("The list has been sorted.");
+      displayTasks();
+    }
+  </script>
+</body>
+</html>
